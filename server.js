@@ -22,6 +22,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 passport.serializeUser(function (user, cb) {
   cb(null, user.id);
+  console.log(user);
 });
 
 passport.deserializeUser(function (id, cb) {
