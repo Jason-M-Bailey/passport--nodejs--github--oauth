@@ -23,6 +23,9 @@ app.use(passport.session());
 passport.serializeUser(function (user, cb) {
   cb(null, user.id);
   console.log(user);
+  console.log(`username is ${user.username}`);
+  console.log(`profile url is: ${user.profileUrl}`);
+  console.log(`email is ${user._json.email}`);
 });
 
 passport.deserializeUser(function (id, cb) {
